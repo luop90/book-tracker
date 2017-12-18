@@ -1,0 +1,41 @@
+@import "splash-screen.less";
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none;
+}
+
+.background-good {
+  background-color: #2ecc71 !important;
+}
+
+.background-bad {
+	color: #e74c3c !important;
+}
+
+.text-good {
+	color: #2ecc71 !important;
+}
+
+.text-bad {
+	color: #e74c3c !important;
+}
+
+.text-warning {
+  color: #8a6d3b !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// From font-awesome, only faster!
+.spin {
+	animation: spin 1s linear infinite;
+}
+
+// *Techincally* need to include a -webkit for full mobile support, but I don't think this will ever be ran on mobile
+@keyframes spin {
+	from { transform: rotate(0deg);   opacity: 1.0; }
+	50%  { transform: rotate(180deg); opacity: 1.0; }
+	to   { transform: rotate(360deg); opacity: 1.0; }
+}

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="en" ng-app="book">
     <meta charset="utf-8">
     <title>Book Tracker</title>
 
     <link rel="stylesheet" href="assets/css/angular-material.min.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- TODO: Change to a local asset -->
 
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="icon" href="assets/img/favicon.ico"> <!-- TODO: Have a favicon... -->
+  </head>
+  <body ng-controller="MainCtrl as main">
+
+    <main ng-show="$root.fullyLoaded" ng-cloak>
+
+    </main>
+
+    <div ng-hide="$root.fullyLoaded" id="splash-screen">
+      <noscript>
+        Javascript must be enabled for this to work.
+      </noscript>
+
+      <h1>Loading...</h1>
+      <h4 ng-cloak>{{ main.loadingQuote }}</h4>
+
+      <preloader></preloader>
+    </div>
 
     <script src="assets/js/angular.min.js" charset="utf-8"></script>
     <script src="assets/js/angular-route.min.js" charset="utf-8"></script>
